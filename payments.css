@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1c92d2, #024823);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-container {
+    background: white;
+    backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    width: 520px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #000000;
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+}
+
+label {
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+}
+
+input {
+    padding: 0.85rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+input:focus {
+    border-color: #1c92d2;
+    outline: none;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.card-input-container {
+    position: relative;
+}
+
+.card-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 28px;
+    opacity: 0.85;
+}
+
+.cvv-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 18px;
+    opacity: 0.85;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-pay {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 0.85rem 1.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-pay:hover {
+    background-color: #2575fc;
+    transform: scale(1.05);
+}
+
+.error {
+    font-size: 0.875rem;
+    color: red;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    visibility: hidden;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 2rem auto;
+}
+
+#paymentStatus {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+    .payment-container {
+        width: 90%;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+}

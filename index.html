@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agricool.com</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+    <script src="cart.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo"><img class="logo-img" src="./images/removebg-logo.png"></div>
+            <ul class="nav-list">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="register.html" class="nav-link">Registration</a></li>
+            </ul>
+            <div class="hamburger"><i class="fas fa-bars"></i></div>
+            <div class="cart">
+                <a href="cart.html" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <section id="home" class="section hero parallax">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to AgriCool</h1>
+            <p class="hero-description">Your comfort is our priority, click "Learn More" if interested.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+    <section id="about" class="section">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-description">AGRICOOL- A company that helps advance farming and prevent
+            desertification. We are working on innovative decisions, which makes way
+            for the creation of a sustainable environment. But our production is based
+            on the use of technology, such as a Windcatcher. Our goal is to help village
+            farmers, and local situations, so they can create a healthy and sustainable
+            environment. <span> A company that helps advance farming and prevent
+            desertification. We’re working on innovative decisions, which makes way
+            for the creation of a sustainable environment. But our production is based
+            on the use of technology, such as a Windcatcher. Our goal is to help village
+            farmers, and local situations, so they can create a healthy and sustainable
+            environment.</span></p>
+    </section>
+    <section id="services" class="section">
+        <h2 class="section-title">Our Services</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Small Size Cargo" loading="lazy" class="card-image">
+                <h3 class="card-title">Small Size Device</h3>
+                <p class="card-description"></p>
+                <button class="btn add-to-cart" data-service="Small Size Cargo" data-price="1500">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Medium Size Cargo" loading="lazy" class="card-image">
+                <h3 class="card-title">Medium Size Device</h3>
+                <p class="card-description"></p>
+                <button class="btn add-to-cart" data-service="Medium Size Cargo" data-price="3500">Add to Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Large Size Cargo" loading="lazy" class="card-image">
+                <h3 class="card-title">Large Size Device</h3>
+                <p class="card-description"></p>
+                <button class="btn add-to-cart" data-service="Large Size Cargo" data-price="5000">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact Us</h2>
+        <button class="btn" id="contactBtn">Open Contact Form</button>
+    </section>
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form class="contact-form" id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61562862057370" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="footer-text">© Triple N Logistics - Since 2024 © | CEO - Anzor Gelashvili, IT Manager - Nodo Gelashvili | If any problems occur, contact us through any of our social media.</p>
+    </footer>
+    <button class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+</body>
+</html>

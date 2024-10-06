@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>agricool.com/register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toggle-container">
+            <button id="login-toggle" class="toggle-btn active">Login</button>
+            <button id="register-toggle" class="toggle-btn">Register</button>
+        </div>
+
+        <div id="login-form" class="form-section active">
+            <h2>Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <div class="password-container">
+                    <input type="password" id="login-password" placeholder="Password" required>
+                    <button type="button" class="toggle-password" onclick="togglePasswordVisibility('login-password')">👁</button>
+                </div>
+                <button class="button" type="submit">Login</button>
+                <div class="loading-spinner" id="login-spinner"></div>
+            </form>
+        </div>
+
+        <div id="register-form" class="form-section">
+            <h2>Register</h2>
+            <form onsubmit="handleRegister(event)">
+                <input type="text" id="register-username" placeholder="Username" required>
+                <input type="email" id="register-email" placeholder="Email" required>
+                <div class="password-container">
+                    <input type="password" id="register-password" placeholder="Password" required>
+                    <button type="button" class="toggle-password" onclick="togglePasswordVisibility('register-password')">👁</button>
+                </div>
+                <div class="password-strength" id="password-strength-text"></div>
+                <div id="captcha-container">
+                    <label for="captcha-answer" id="captcha-question"></label>
+                    <input type="text" id="captcha-answer" placeholder="Enter answer" required>
+                </div>
+                <button class="button" type="submit">Register</button>
+                <div class="loading-spinner" id="register-spinner"></div>
+            </form>
+        </div>
+    </div>
+
+    <label class="switch">
+        <input type="checkbox" id="dark-mode-toggle" onclick="toggleDarkMode()">
+        <span class="slider"></span>
+    </label>
+
+    <script src="register.js"></script>
+</body>
+</html>

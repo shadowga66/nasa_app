@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Payment Page</title>
+    <link rel="stylesheet" href="payments.css">
+    <script src="payments.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="payment-container glass-effect">
+        <h1 class="title">Secure Payment</h1>
+        <form id="paymentForm" class="payment-form">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                <small class="error" id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                <small class="error" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <div class="card-input-container">
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9101 1121" maxlength="19" required>
+                    <img src="./images/png-transparent-default-payment-method-icon (1).png" alt="Card Icon" class="card-icon" id="cardIcon">
+                </div>
+                <small class="error" id="cardError"></small>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="expiryDate">Expiry Date</label>
+                    <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                    <small class="error" id="expiryError"></small>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="password" id="cvv" name="cvv" placeholder="•••" maxlength="3" required>
+                    <img src="./images/4117765.png" alt="CVV Info" class="cvv-icon">
+                    <small class="error" id="cvvError"></small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" placeholder="100.00" required>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label for="saveCard">Save card details for future use</label>
+                <input type="checkbox" id="saveCard" name="saveCard">
+            </div>
+
+            <button type="submit" class="btn-pay">Pay Now</button>
+        </form>
+        
+        <div class="loader" id="loader" style="display: none;"></div>
+        <div id="paymentStatus"></div>
+    </div>
+</body>
+</html>
